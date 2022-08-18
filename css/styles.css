@@ -1,7 +1,7 @@
 :root {
   /* Fonts */
-  --main-font-family: 'Roboto', sans-serif;
-  --secondary-font-family: 'Raleway', sans-serif;
+  --main-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Raleway", sans-serif;
 
   /* text colors*/
   --primary-txt-cl: #212121;
@@ -19,17 +19,21 @@
   --accent-cl: #2196f3;
   --accent-act-cl: #188ce8;
   --line-cl: #ececec;
+  --portfolio-bc-cl: #eeeeee;
 }
 
 body {
   font-family: var(--main-font-family);
+  font-size: 14px;
   background-color: var(--body-bc-cl);
   color: var(--primary-txt-cl);
 }
 span {
   color: var(--accent-txt-cl);
 }
-
+a {
+  text-decoration: none;
+}
 /* шапка сторінки */
 .header {
   background-color: var(--light-bc-cl);
@@ -49,12 +53,13 @@ span {
   color: var(--dark-txt-cl);
 }
 
-.link {
+.header .link {
   font-family: inherit;
   font-weight: 500;
-  font-size: 14px;
+  font-size: inherit;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  color: inherit;
 }
 
 .link:hover,
@@ -84,15 +89,16 @@ span {
   color: var(--light-txt-cl);
 }
 
-.hero-btn {
-  font-family: inherit;
+.hero .btn {
   font-weight: 700;
-  font-size: 16px;
   line-height: calc(30 / 16);
-  text-align: center;
   letter-spacing: 0.06em;
   background: var(--accent-cl);
   color: var(--light-txt-cl);
+
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-btn:hover,
@@ -115,23 +121,20 @@ span {
 }
 
 .item-title {
-  font-size: 14px;
+  font-size: inherit;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 .desc {
-  font-weight: 400;
-  font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
 
-  color: var(--secondary-txt-cl) #757575;
+  color: var(--secondary-txt-cl);
 }
 /* чим ми займаємося */
 
 .section-title {
-  font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
@@ -154,7 +157,6 @@ span {
   letter-spacing: 0.03em;
 }
 .team-position {
-  font-weight: 400;
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
@@ -177,14 +179,50 @@ span {
 
 .adress .link {
   font-weight: 400;
-  font-size: 14px;
+  font-size: inherit;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
 }
 
-.contact {
+.adress .contact {
   color: var(--light-txt-cl-60);
 }
 /* портфоліо */
+/* фільтр */
 
-/**/
+.btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: inherit;
+  background-color: var(--section-bc-cl);
+
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  color: var(--light-txt-cl);
+  background-color: var(--accent-cl);
+}
+/* галерея проєктів */
+
+.galery-item {
+  background-color: var(--light-bc-cl);
+}
+
+.project-title {
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+}
+.project-name {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-txt-cl);
+}
