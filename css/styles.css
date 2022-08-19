@@ -14,7 +14,6 @@
   /* background colors */
   --baner-cl: #2f303a;
   --section-bc-cl: #f5f4fa;
-  --body-bc-cl: #f5f5f5;
   --light-bc-cl: #ffffff;
   --accent-cl: #2196f3;
   --accent-act-cl: #188ce8;
@@ -25,45 +24,48 @@
 body {
   font-family: var(--main-font-family);
   font-size: 14px;
-  background-color: var(--body-bc-cl);
   color: var(--primary-txt-cl);
 }
-span {
-  color: var(--accent-txt-cl);
-}
-a {
-  text-decoration: none;
-}
+
 /* шапка сторінки */
-.header {
-  background-color: var(--light-bc-cl);
-}
 
 .list {
   list-style: none;
 }
+.list a {
+  text-decoration: none;
+}
 
-.logo {
+.header {
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+}
+
+.header-logo,
+.footer-logo {
   font-family: var(--secondary-font-family);
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
 
+  text-decoration: none;
+}
+.header-logo {
   color: var(--dark-txt-cl);
 }
-
-.header .link {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: inherit;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  color: inherit;
+.accent {
+  color: var(--accent-txt-cl);
 }
 
-.link:hover,
-.link:focus {
+.header-link {
+  color: inherit;
+}
+.header-link:hover,
+.header-link:focus,
+.footer-link:hover,
+.footer-link:focus {
   color: var(--accent-txt-cl);
 }
 
@@ -88,9 +90,14 @@ a {
 
   color: var(--light-txt-cl);
 }
+.hero-btn,
+.btn {
+  cursor: pointer;
+}
 
-.hero .btn {
+.hero-btn {
   font-weight: 700;
+  font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   background: var(--accent-cl);
@@ -121,7 +128,7 @@ a {
 }
 
 .item-title {
-  font-size: inherit;
+  font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -165,43 +172,36 @@ a {
 }
 /* підвал сторінки */
 
-.futer {
+.footer {
   background-color: var(--baner-cl);
-  color: var(--light-txt-cl);
-}
-.futer .logo,
-.futer .link {
-  color: inherit;
-}
-.adress {
-  font-style: normal;
 }
 
-.adress .link {
-  font-weight: 400;
-  font-size: inherit;
+.address {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
-}
 
-.adress .contact {
+  font-style: normal;
+}
+.footer-logo,
+.footer-link {
+  color: var(--light-txt-cl);
+}
+.contact {
   color: var(--light-txt-cl-60);
 }
+
 /* портфоліо */
+
 /* фільтр */
 
 .btn {
-  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
   text-align: center;
   letter-spacing: 0.03em;
-
-  color: inherit;
+  color: var(--primary-txt-cl);
   background-color: var(--section-bc-cl);
-
-  cursor: pointer;
 }
 .btn:hover,
 .btn:focus {
@@ -209,10 +209,6 @@ a {
   background-color: var(--accent-cl);
 }
 /* галерея проєктів */
-
-.galery-item {
-  background-color: var(--light-bc-cl);
-}
 
 .project-title {
   font-size: 18px;
